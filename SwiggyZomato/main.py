@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import os
-from annotated_text import annotated_text, annotation
+
 # Load data
 data = pd.read_csv("SwiggyZomato/data.txt")
 
@@ -33,42 +33,13 @@ if not os.path.isfile("model.h5"):
     model.save("model.h5")
 else:
     model = load_model("SwiggyZomato/model.h5")
-# st.text("")
-# st.text("")
-# st.text("")
-# st.text("")
-# st.text("")
-# st.text("")
-# st.text("")
-# st.text("")
+
 _, col2, _ = st.columns([1, 2, 1])
-st.markdown("""
-<style>
-body {
-    background-color: #F5A623;
-}
-</style>
-""", unsafe_allow_html=True)
+
 st.title("Food Delivery Prediction App")
 with col2:
     st.image("SwiggyZomato/image.jpg",width=350)
-# st.set_background_color("#F5A623")
 
-# def set_bg_hack_url():
-#     st.markdown(
-#          f"""
-#           <style>
-#           .stApp {{
-#               background: url("https://inc42.com/wp-content/uploads/2022/05/Qcommerce-Story_Feature-Image.jpg");
-#               background-size: cover
-#           }}
-#           </style>
-#           """,
-#          unsafe_allow_html=True
-#      )
-# set_bg_hack_url()
-# # st.set_page_config(page_title="Food Delivery Time Prediction App", page_icon=":fork_and_knife:", layout="wide")
-# st.image('image.jpg',width=200)
 st.markdown("### This app uses a predictive model to estimate the delivery time for your food order.")
 st.write("Please input the following information to predict the delivery time:")
 
