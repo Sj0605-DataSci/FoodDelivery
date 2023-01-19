@@ -18,7 +18,7 @@ data = pd.read_csv("SwiggyZomato/data.txt")
 # # creating the LSTM neural network model
 # from keras.models import Sequential
 # from keras.layers import Dense, LSTM
-# from keras.models import load_model
+from keras.models import load_model
 
 
 # if not os.path.isfile("model.h5"):
