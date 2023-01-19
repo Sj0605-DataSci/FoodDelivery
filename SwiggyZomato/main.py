@@ -51,7 +51,7 @@ body {
 """, unsafe_allow_html=True)
 st.title("Food Delivery Prediction App")
 with col2:
-    st.image("image.jpg",width=350)
+    st.image("SwiggyZomato/image.jpg",width=350)
 # st.set_background_color("#F5A623")
 
 # def set_bg_hack_url():
