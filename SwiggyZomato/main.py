@@ -4,7 +4,7 @@ import pandas as pd
 import os
 from annotated_text import annotated_text, annotation
 # Load data
-data = pd.read_csv("data.txt")
+data = pd.read_csv("SwiggyZomato/data.txt")
 
 from sklearn.model_selection import train_test_split
 x = np.array(data[["Delivery_person_Age",
@@ -32,7 +32,7 @@ if not os.path.isfile("model.h5"):
     model.fit(xtrain, ytrain, batch_size=1, epochs=9)
     model.save("model.h5")
 else:
-    model = load_model("model.h5")
+    model = load_model("SwiggyZomato/model.h5")
 # st.text("")
 # st.text("")
 # st.text("")
