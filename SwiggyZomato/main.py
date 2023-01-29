@@ -28,9 +28,9 @@ st.markdown("### This app uses a predictive model to estimate the delivery time 
 st.write("Please input the following information to predict the delivery time:")
 
 # Use widgets to get user input
-age = st.sidebar.slider("Age of Delivery Person", 18, 60, 30)
+age = st.sidebar.slider("Age of Delivery Person", 18, 30, 30)
 ratings = st.sidebar.slider("Ratings of Delivery Person", 1, 5, 3)
-distance = st.sidebar.slider("Distance (in Km)", 1, 100, 5)
+distance = st.sidebar.slider("Distance (in Km)", 1, 30, 5)
 # Create a predict button
 if st.button("Predict"):
     delivery_info = np.array([[age, ratings, distance]])
