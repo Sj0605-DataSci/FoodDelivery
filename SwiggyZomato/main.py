@@ -1,16 +1,13 @@
 import streamlit as st
 import numpy as np
+import tensorflow as tf
 import pandas as pd
-import os
 
-# Load data
 data = pd.read_csv("SwiggyZomato/data.txt")
 
 
-from keras.models import load_model
 
-
-model = load_model("SwiggyZomato/model.h5")
+model = tf.keras.models.load_model("SwiggyZomato/model.h5")
 
 _, col2, _ = st.columns([1, 2, 1])
 
