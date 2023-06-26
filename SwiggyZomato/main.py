@@ -4,13 +4,13 @@ import pandas as pd
 import os
 
 # Load data
-data = pd.read_csv("SwiggyZomato/data.txt")
+data = pd.read_csv("data.txt")
 
 
 from keras.models import load_model
 
 
-model = load_model("Sj0605-DataSci/FoodDelivery/SwiggyZomato/model.h5")
+model = load_model("model.h5")
 
 _, col2, _ = st.columns([1, 2, 1])
 
