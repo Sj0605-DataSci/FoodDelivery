@@ -10,7 +10,7 @@ data = pd.read_csv("SwiggyZomato/data.txt")
 from keras.models import load_model
 
 
-model = load_model("SwiggyZomato/model.h5")
+model = load_model("Sj0605-DataSci/FoodDelivery/SwiggyZomato/model.h5")
 
 _, col2, _ = st.columns([1, 2, 1])
 
